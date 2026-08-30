@@ -4,7 +4,8 @@
   "description": "DevMentor — AI That Teaches You Your Own Code",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "npm start --prefix server",
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
