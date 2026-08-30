@@ -21,6 +21,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api', analyzeRouter);
 app.use('/api', mentorRouter);
 
-app.listen(PORT, () => {
-  console.log(`🚀 DevMentor Backend running on http://localhost:${PORT}`);
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
